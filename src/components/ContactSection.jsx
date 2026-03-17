@@ -58,7 +58,7 @@ function ContactSection() {
             Got a project in mind? Tell us about it — we’ll get back asap.
           </p>
 
-          <div className="info-item"> official@ismdatatech.com</div>
+          <div className="info-item"> hibuzin@gmail.com</div>
           <div className="info-item"> Tamilnadu, India</div>
         </div>
 
