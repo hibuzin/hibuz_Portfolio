@@ -373,7 +373,7 @@ const Navbar = () => {
       `}</style>
 
       <nav className="navbar">
-        <div className="logo">HIBUZ</div>
+        <div className="logo">HIBUZ TECHNOLOGIES</div>
 
         <div className="nav-right">
           <ul className={`nav-links ${menuOpen ? "open" : ""}`}>

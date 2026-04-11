@@ -1,0 +1,48 @@
+const express = require('express');
+const { Resend } = require('resend');
+
+const router = express.Router();
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+router.post('/', async (req, res) => {
+    try {
+        const { name, email, message } = req.body;
+
+        if (!name || !email || !message) {
+            return res.status(400).json({ message: 'All fields required' });
+        }
+
+
+        await resend.emails.send({
+            from: "contact us- portfolio <onboarding@resend.dev>",
+            to: "hibuzin@gmail.com",
+            subject: 'Contact form',
+            text: `
+Name: ${name}
+Email: ${email}
+Message: ${message}
+      `,
+        });
+
+
+        await resend.emails.send({
+            from: "hibuz <onboarding@resend.dev>",
+            to: email,
+            subject: 'We received your message',
+            text: `Hi ${name},
+
+Thanks for contacting us! We received your message and will get back to you shortly.
+
+— Team`,
+        });
+
+        res.json({ success: true, message: 'Message sent' });
+
+    } catch (err) {
+        console.error('Email Error:', err);
+        res.status(500).json({ message: 'Email failed', error: err.message });
+    }
+});
+
+module.exports = router;
