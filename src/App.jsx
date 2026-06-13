@@ -13,6 +13,10 @@ import JewelleryProject from "./pages/JewelleryProject";
 import LandProject from "./pages/LandProject";
 import BlogSection from "./components/BlogSection";
 import WhatsAppButton from "./components/WhatsAppButton";
+import TopBar from "./components/TopBar";
+import UIUXSection from "./components/UIUXSection";
+import TestimonialSection from "./components/TestimonialSection";
+
 
 const scrollPositions = {}; 
 
@@ -21,9 +25,13 @@ function Home() {
     <>
       <Navbar />
       <Hero />
+      <UIUXSection />
+      <TestimonialSection /> 
+      <ProjectsSection />
+       
       <ServicesSection />
       <ProcessSection />
-      <ProjectsSection />
+      
       <BlogSection/>
       <AboutSection />
       <ContactSection />

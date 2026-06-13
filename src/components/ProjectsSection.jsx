@@ -1,60 +1,126 @@
 import React from "react";
-import "./projects.css";
-import { useNavigate } from "react-router-dom";
-
-const projects = [
-  {
-    category: "E-commerce",
-    title: "LUXURY GOLD",
-    slug: "jewellery",
-    desc: "Premium online jewellery platform showcasing gold, diamond, and bridal collections with secure checkout and seamless shopping experience.",
-    tech: ["React", "Node.js", "MongoDB", "Render"],
-    accent: "#FACC15",
-  },
-  {
-    category: "E-commerce",
-    title: "PATRO CLOTHING",
-    slug: "clothing",
-    desc: "Premium fashion shopping app offering curated collections, seasonal drops, size filters, and smooth payment integration.",
-    tech: ["React", "Node.js", "MongoDB", "Render"],
-    accent: "#A855F7",
-  },
-
-];
+import goldImg from "../assets/gold.png";
+import { FaReact, FaNodeJs } from "react-icons/fa";
+import { SiFlutter, SiMongodb } from "react-icons/si";
 
 function ProjectsSection() {
-  const navigate = useNavigate();
-
   return (
-    <section id="projects" className="projects">
-      <div className="projects-header">
-        <p className="projects-label">OUR WORK</p>
-        <h2 className="projects-title">Our Recent Projects</h2>
+    <section style={styles.projects}>
+      
+      {/* TOP CENTER TITLE */}
+      <div style={styles.header}>
+        <div style={styles.line}></div>
+        <p style={styles.label}>OUR CASES</p>
+        <div style={styles.line}></div>
       </div>
 
-      <div className="projects-grid">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            onClick={() => navigate(`/project/${project.slug}`)}
-            className={`project-card ${project.fullWidth ? "full-width" : ""}`}
-            style={{ "--accent": project.accent }}
-          >
-             <div className="project-arrow">↗</div>
-            <span className="project-category">{project.category}</span>
-            <h3>{project.title}</h3>
-            <p>{project.desc}</p>
+      {/* CONTENT (LEFT + RIGHT) */}
+      <div style={styles.content}>
 
-            <div className="tech-stack">
-              {project.tech.map((tech, i) => (
-                <span key={i}>{tech}</span>
-              ))}
-            </div>
-          </div>
-        ))}
+        {/* LEFT SIDE */}
+        <div style={styles.left}>
+          <h2 style={styles.title}>LUXURY GOLD</h2>
+
+          <p style={styles.desc}>
+            A premium e-commerce platform designed for showcasing gold, diamond,
+            and bridal collections with a modern and elegant interface.
+            Built to deliver a seamless shopping experience with secure checkout,
+            fast performance, and intuitive navigation for users.
+          </p>
+          <div style={styles.icons}>
+  <FaReact style={{ color: "#61DBFB" }} />     
+  <SiFlutter style={{ color: "#02569B" }} />  
+  <SiMongodb style={{ color: "#47A248" }} /> 
+  <FaNodeJs style={{ color: "#68A063" }} />   
+</div>
+        </div>
+
+        {/* RIGHT SIDE IMAGE */}
+        <div style={styles.right}>
+          <img src={goldImg} alt="gold" style={styles.image} />
+        </div>
+
       </div>
+
     </section>
   );
 }
+
+const styles = {
+  projects: {
+    padding: "80px 8%",
+    background: "#ffffff",
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "100vh",
+  },
+
+  header: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "20px",
+    marginBottom: "60px",
+  },
+
+  label: {
+    color: "#121313",
+    fontSize: "32px",
+    fontWeight: "600",
+    letterSpacing: "3px",
+    textTransform: "uppercase",
+    margin: 0,
+  },
+
+  line: {
+    width: "100px",
+    height: "2px",
+    background: "linear-gradient(90deg, transparent, #171818, transparent)",
+  },
+
+  content: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    gap: "40px",
+    padding: "50px",
+  },
+
+  left: {
+    flex: 1,
+  },
+
+  right: {
+    flex: 1,
+    display: "flex",
+    justifyContent: "center",
+  },
+
+  icons: {
+  display: "flex",
+  gap: "20px",
+  marginTop: "20px",
+  fontSize: "38px",
+},
+
+  image: {
+    width: "100%",
+    maxWidth: "600px",
+    borderRadius: "10px",
+     marginTop: "-110px"
+  },
+  title: {
+    fontSize: "28px",
+    fontWeight: "600",
+    marginBottom: "16px",
+    color: "#04295e",
+  },
+
+  desc: {
+    fontSize: "15px",
+    lineHeight: "1.8",
+    color: "#475569",
+  },
+};
 
 export default ProjectsSection;

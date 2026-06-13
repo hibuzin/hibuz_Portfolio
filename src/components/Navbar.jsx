@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import logoImg from "../assets/hibuz.png";
 
 const Navbar = () => {
   const [active, setActive] = useState("HOME");
@@ -6,9 +7,10 @@ const Navbar = () => {
 
   const links = [
     { name: "HOME", id: "home" },
+    { name: "TESTIMONIAL", id: "testimonial" },
+    
+    { name: "CASES", id: "projects" },
     { name: "SERVICES", id: "services" },
-    { name: "OUR PROCESS", id: "process" },
-    { name: "PROJECTS", id: "projects" },
     { name: "BLOG", id: "blog" },
     { name: "ABOUT", id: "about" }
   ];
@@ -17,9 +19,10 @@ const Navbar = () => {
     const handleScroll = () => {
       const sections = [
         "home",
+         "testimonial",
+         "projects",
         "services",
-        "process",
-        "projects",
+        
         "blog",
         "about"
       ];
@@ -74,21 +77,23 @@ const Navbar = () => {
 
         .navbar{
           width:100%;
-          height:64px;
-          padding:0 40px;
-
+          height:96px;
+          padding: 0 60px 0 40px;
+ padding-right: 60px;
           display:flex;
           align-items:center;
-          justify-content:space-between;
+          justify-content:flex-start;
 
           font-family:'Exo 2', sans-serif;
 
           position:sticky;
           top:0;
           z-index:9999;
+          gap: 270px;
+          padding-right: 60px; 
 
-          background:rgba(13,13,15,0.95);
-          backdrop-filter:blur(8px);
+         background:#ffffff;
+          backdrop-filter:none;
           border-bottom:1px solid rgba(255,255,255,0.06);
         }
 
@@ -96,6 +101,7 @@ const Navbar = () => {
           font-family:'Rajdhani', sans-serif;
           font-size:26px;
           font-weight:700;
+          margin-left: 80px; 
           background:linear-gradient(90deg,#38bdf8,#818cf8);
           -webkit-background-clip:text;
           -webkit-text-fill-color:transparent;
@@ -104,10 +110,37 @@ const Navbar = () => {
           z-index:10001;
         }
 
+        .logo-wrapper{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  margin-left:80px; 
+}
+
+.logo-img{
+  width:60px;
+  height:60px;
+  border-radius:50%;   
+  object-fit:cover;
+  margin-bottom:4px;
+  margin-top: 15px;
+}
+
+.logo-text{
+  font-family:'Rajdhani', sans-serif;
+  font-size:18px;
+  font-weight:700;
+  
+  background:linear-gradient(90deg,#38bdf8,#818cf8);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  letter-spacing:2px;
+}
         .nav-right{
           display:flex;
           align-items:center;
-          gap:40px;
+          gap: 10px;
         }
 
         .nav-links{
@@ -122,7 +155,7 @@ const Navbar = () => {
           font-size:13px;
           font-weight:600;
           letter-spacing:1.5px;
-          color:#94a3b8;
+          color:#000000; 
           cursor:pointer;
           transition:color .25s ease;
           white-space:nowrap;
@@ -164,6 +197,7 @@ const Navbar = () => {
         .live-btn{
           background: linear-gradient(135deg, #02ACE8, #7C6EFA);
           color:#fff;
+  margin-right: 60px; 
           border:none;
           padding:10px 20px;
           border-radius:1px;
@@ -235,6 +269,7 @@ const Navbar = () => {
 
           .live-btn{
             display:none;
+
           }
 
           .menu-icon{
@@ -272,7 +307,7 @@ const Navbar = () => {
             display:flex;
             flex-direction:column;
             align-items:stretch;
-            gap:10px;
+            gap:20px;
             list-style:none;
 
             padding:16px;
@@ -373,7 +408,10 @@ const Navbar = () => {
       `}</style>
 
       <nav className="navbar">
-        <div className="logo">HIBUZ TECHNOLOGIES</div>
+       <div className="logo-wrapper">
+  <img src={logoImg} alt="logo" className="logo-img" /> 
+  <div className="logo-text">HIBUZ TECHNOLOGIES</div>
+</div>
 
         <div className="nav-right">
           <ul className={`nav-links ${menuOpen ? "open" : ""}`}>

@@ -21,7 +21,7 @@ const BlogSection = () => {
       <style>{`
         .blog-section {
   padding: 100px 72px;
-  background: #0e161f;
+  background: #f2f4f7;
   color: white;
   font-family: 'DM Sans', sans-serif;
   text-align: center; /* Center all content inside */
@@ -34,7 +34,7 @@ const BlogSection = () => {
   gap: 12px;                  /* space between text and lines */
   justify-content: center;
 
-  color: #00d4ff;
+  color: #04788f;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 3px;
@@ -47,7 +47,7 @@ const BlogSection = () => {
   content: "";
   width: 46px;
   height: 2px;
-  background: #22d3ee;
+  background: #057f92;
   opacity: 0.7;
 }
 
@@ -57,7 +57,7 @@ const BlogSection = () => {
   font-weight: 700;
   line-height: 1.15;
   margin: 0 0 50px 0; /* Add bottom margin for spacing from content below */
-  background: linear-gradient(85deg, cyan, rgb(117, 62, 227));
+  background: linear-gradient(black,  rgb(17, 17, 19));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block; /* So gradient text respects centering */
@@ -71,7 +71,8 @@ const BlogSection = () => {
         }
 
         .blog-card{
-          background:#141b2d;
+          background: #e2edfd;
+
           border-radius:14px;
           overflow:hidden;
           transition:0.3s;
@@ -87,14 +88,17 @@ const BlogSection = () => {
            object-fit: contain;
         }
 
-        .blog-card h3{
-          padding:20px;
-          font-size:20px;
-        }
+        .blog-card h3 {
+  padding: 20px;
+  font-size: 20px;
+  color: #0f40e0; /* Gold */
+  font-weight: 700;
+}
 
         .blog-card p{
           padding:0 20px 20px 20px;
           color:#9aa4b2;
+          color: #7878f8;
           font-size:14px;
         }
 
