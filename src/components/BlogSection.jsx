@@ -71,7 +71,7 @@ const BlogSection = () => {
         }
 
         .blog-card{
-          background: #e2edfd;
+          background: #fafbfd;
 
           border-radius:14px;
           overflow:hidden;
