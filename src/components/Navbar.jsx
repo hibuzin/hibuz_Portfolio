@@ -410,7 +410,7 @@ const Navbar = () => {
       <nav className="navbar">
        <div className="logo-wrapper">
   <img src={logoImg} alt="logo" className="logo-img" /> 
-  <div className="logo-text">HIBUZ TECHNOLOGIES</div>
+  <div className="logo-text">HIBUZ TECHNOLOGIESo</div>
 </div>
 
         <div className="nav-right">
