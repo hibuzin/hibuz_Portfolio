@@ -136,6 +136,8 @@ const Navbar = () => {
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   letter-spacing:2px;
+
+  white-space: nowrap;
 }
         .nav-right{
           display:flex;
@@ -410,7 +412,7 @@ const Navbar = () => {
       <nav className="navbar">
        <div className="logo-wrapper">
   <img src={logoImg} alt="logo" className="logo-img" /> 
-  <div className="logo-text">HIBUZ TECHNOLOGIESo</div>
+  <div className="logo-text">HIBUZ TECHNOLOGIES</div>
 </div>
 
         <div className="nav-right">
