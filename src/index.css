@@ -1,11 +1,60 @@
+/* ================================
+   GLOBAL RESET
+================================ */
 
-
-html, body, #root{
-   min-height:100%;
-  background:#0e161f;
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+html {
+  width: 100%;
+  min-height: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Poppins", sans-serif;
+
+  background: #ffffff;
+  color: #171718;
+
+  overflow-x: hidden;
 }
 
+#root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Prevent media from overflowing */
+
+img,
+video,
+svg {
+  max-width: 100%;
+}
+
+/* Buttons and form elements */
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Better mobile text rendering */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
