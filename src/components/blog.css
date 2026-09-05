@@ -1,17 +1,22 @@
 /* ================================
-   PROCESS SECTION
+   BLOG SECTION
 ================================ */
 
-.process {
+.blog-section {
   padding: 100px 8%;
+
   background: #ffffff;
+
   color: rgb(12, 12, 12);
+
   text-align: center;
+
   scroll-margin-top: 70px;
 }
 
-.process-container {
+.blog-container {
   max-width: 1200px;
+
   margin: 0 auto;
 }
 
@@ -19,29 +24,37 @@
    SECTION LABEL
 ================================ */
 
-.process-label {
+.blog-label {
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
+
   gap: 8px;
 
   color: #0a0a0a;
+
   font-size: 12px;
+
   font-weight: 600;
+
   letter-spacing: 3px;
+
   text-transform: uppercase;
 
   margin: 0 0 8px;
 }
 
-.process-label::before,
-.process-label::after {
+.blog-label::before,
+.blog-label::after {
   content: "";
 
   width: 42px;
+
   height: 2px;
 
   background: #00d4ff;
+
   opacity: 0.7;
 
   border-radius: 999px;
@@ -51,9 +64,11 @@
    TITLE
 ================================ */
 
-.process-title {
+.blog-title {
   font-size: 40px;
+
   font-weight: 700;
+
   line-height: 1.2;
 
   margin: 0 0 8px;
@@ -69,52 +84,49 @@
 }
 
 /* ================================
-   DESCRIPTION
+   SUBTITLE
 ================================ */
 
-.process-description {
-  max-width: 700px;
+.blog-sub {
+  max-width: 600px;
 
-  margin: 0 auto 65px;
+  margin: 0 auto 50px;
 
   color: #171718;
 
   font-size: 15px;
-  line-height: 1.7;
+
+  line-height: 1.6;
 }
 
 /* ================================
-   PROCESS GRID
+   BLOG GRID
 ================================ */
 
-.process-steps {
+.blog-grid {
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
   gap: 24px;
 
-  text-align: center;
+  text-align: left;
 }
 
 /* ================================
-   STEP CARD
+   BLOG CARD
 ================================ */
 
-.step-card {
-  position: relative;
-
-  padding: 48px 28px 28px;
-
-  min-height: 210px;
-
+.blog-card {
   background: #f3f8ff;
-
-  border: 1px solid transparent;
 
   border-radius: 12px;
 
-  text-align: center;
+  overflow: hidden;
+
+  border: 1px solid transparent;
+
+  position: relative;
 
   transition:
     transform 0.35s ease,
@@ -127,7 +139,7 @@
    CARD HOVER
 ================================ */
 
-.step-card:hover {
+.blog-card:hover {
   transform: translateY(-10px) scale(1.02);
 
   border-color: rgba(37, 99, 235, 0.35);
@@ -144,86 +156,73 @@
 }
 
 /* ================================
-   STEP NUMBER
+   IMAGE CONTAINER
 ================================ */
 
-.step-number {
-  position: absolute;
+.blog-image-wrapper {
+  width: 100%;
 
-  top: -25px;
-  left: 50%;
+  height: 220px;
 
-  transform: translateX(-50%);
-
-  width: 55px;
-  height: 55px;
+  background: #ffffff;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
-  background: #141414;
-
-  color: #00d4ff;
-
-  border: 1px solid rgba(0, 212, 255, 0.35);
-
-  border-radius: 12px;
-
-  font-size: 16px;
-  font-weight: 700;
-
-  box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.12);
-
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease,
-    transform 0.3s ease;
+  overflow: hidden;
 }
 
 /* ================================
-   NUMBER HOVER
+   BLOG IMAGE
 ================================ */
 
-.step-card:hover .step-number {
-  background: #00d4ff;
+.blog-card img {
+  width: 100%;
 
-  color: #081018;
+  height: 100%;
 
-  border-color: #00d4ff;
+  object-fit: contain;
 
-  box-shadow:
-    0 0 20px rgba(0, 212, 255, 0.2);
+  transition: transform 0.4s ease;
+}
 
-  transform: translateX(-50%) scale(1.06);
+.blog-card:hover img {
+  transform: scale(1.04);
 }
 
 /* ================================
-   STEP TITLE
+   BLOG CONTENT
 ================================ */
 
-.step-card h3 {
-  margin: 0 0 10px;
+.blog-content {
+  padding: 24px;
+}
 
-  color: rgb(17, 17, 17);
+/* ================================
+   BLOG TITLE
+================================ */
 
-  font-size: 18px;
-  font-weight: 600;
+.blog-card h3 {
+  margin: 0 0 12px;
+
+  font-size: 19px;
 
   line-height: 1.4;
 
-  letter-spacing: 0;
+  font-weight: 600;
+
+  color: rgb(17, 17, 17);
 }
 
 /* ================================
-   STEP DESCRIPTION
+   BLOG DESCRIPTION
 ================================ */
 
-.step-card p {
-  margin: 0;
+.blog-card p {
+  margin: 0 0 20px;
 
   color: #171718;
 
@@ -233,22 +232,73 @@
 }
 
 /* ================================
+   READ MORE BUTTON
+================================ */
+
+.blog-card button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 11px 18px;
+
+  background: #141414;
+
+  border: 1px solid #141414;
+
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* ================================
+   BUTTON HOVER
+================================ */
+
+.blog-card button:hover {
+  transform: translateY(-2px);
+
+  background: #00d4ff;
+
+  border-color: #00d4ff;
+
+  color: #081018;
+
+  box-shadow:
+    0 10px 24px rgba(0, 212, 255, 0.18);
+}
+
+/* ================================
    TABLET
 ================================ */
 
 @media (max-width: 992px) {
-  .process {
+  .blog-section {
     padding: 80px 6%;
   }
 
-  .process-title {
-    font-size: 36px;
-  }
-
-  .process-steps {
+  .blog-grid {
     grid-template-columns: repeat(2, 1fr);
 
     gap: 20px;
+  }
+
+  .blog-title {
+    font-size: 36px;
   }
 }
 
@@ -257,37 +307,37 @@
 ================================ */
 
 @media (max-width: 600px) {
-  .process {
+  .blog-section {
     padding: 70px 5%;
   }
 
-  .process-title {
+  .blog-title {
     font-size: 32px;
   }
 
-  .process-description {
+  .blog-sub {
     font-size: 14px;
 
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
-  .process-steps {
+  .blog-grid {
     grid-template-columns: 1fr;
-
-    gap: 20px;
   }
 
-  .step-card {
-    min-height: auto;
-
-    padding: 45px 24px 26px;
+  .blog-image-wrapper {
+    height: 200px;
   }
 
-  .step-card h3 {
-    font-size: 17px;
+  .blog-content {
+    padding: 22px;
   }
 
-  .step-card p {
+  .blog-card h3 {
+    font-size: 18px;
+  }
+
+  .blog-card p {
     font-size: 13px;
   }
 }
@@ -297,22 +347,25 @@
 ================================ */
 
 @media (max-width: 480px) {
-  .process {
+  .blog-section {
     padding: 60px 4%;
   }
 
-  .process-label {
+  .blog-label {
     font-size: 11px;
 
     letter-spacing: 2px;
   }
 
-  .process-title {
+  .blog-title {
     font-size: 28px;
   }
 
-  .process-number {
-    width: 52px;
-    height: 52px;
+  .blog-image-wrapper {
+    height: 180px;
+  }
+
+  .blog-content {
+    padding: 20px;
   }
 }
