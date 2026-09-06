@@ -94,7 +94,7 @@ function ContactSection() {
           ></textarea>
 
           <button type="submit">
-            {loading ? "Sending..." : "Send Message →"}
+            {loading ? "Sending..." : "SEND MESSAGE →"}
           </button>
         </form>
       </div>

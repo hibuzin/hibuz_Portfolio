@@ -38,7 +38,7 @@ const Hero = () => {
             width: 850px !important;
             max-width: 95% !important;
             margin-top: 45px !important;
-            transform: scale(1) !important;
+           
           }
 
           .hero-tech-section {
