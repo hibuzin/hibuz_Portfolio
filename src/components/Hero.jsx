@@ -2,10 +2,16 @@ import RippleGrid from "./RippleGrid";
 import phones from "../assets/phones2.png";
 import techStack from "../assets/techicon.png";
 
+
+
 const Hero = () => {
   return (
     <>
       <style>{`
+
+
+
+      
         /* =================================
            HERO - TABLET
         ================================= */
@@ -273,7 +279,7 @@ const Hero = () => {
             </div>
 
             <div className="hero-tech-desc" style={styles.techDesc}>
-              {`Our Team with 7+ average years of experience crafting cutting-edge apps
+              {`Our Team with 3+ years of experience crafting cutting-edge apps
 will set your business apart with innovative approach and proven tracks
 we’ll take your business to the next level.`}
             </div>
