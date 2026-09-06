@@ -19,7 +19,7 @@ const services = [
   {
     icon: <Smartphone size={22} />,
     title: "Mobile App Development",
-    desc: "We build cross-platform mobile apps with Flutter and React Native, and also develop native Android applications using Kotlin — delivering fast, scalable, and high-performance mobile experiences.",
+    desc: "We build cross-platform mobile apps with Flutter and React Native, and also develop native Android applications using Kotlin",
     accent: "#f6f7f6",
    
   },
